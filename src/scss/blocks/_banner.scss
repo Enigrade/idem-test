@@ -1,0 +1,130 @@
+.banner-block {
+  background-color: #F5F5F5;
+
+  &__wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    @media (max-width: 992px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
+  &__slide, &__slide-content {
+    margin: 0 auto;
+    width: 100%;
+    @extend %flex-row;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+  }
+
+  &__slide-title {
+    @extend %text-h1;
+    width: 27.8125rem;
+    margin-bottom: 9.625rem;
+    padding-top: 3rem;
+    @media (max-width: 992px) {
+      width: auto;
+      max-width: 100%;
+      padding-top: 48px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 45px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__slide-image {
+    position: relative;
+    width: 38.25rem;
+    img {
+      max-width: 100%;
+    }
+    img.mob {
+      display: none;
+    }
+    @media (max-width: 992px) {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      right: 0;
+      img {
+        height: 100%;
+        max-width: 10000%;
+      }
+    }
+    @media (max-width: 767px) {
+      position: relative;
+      width: 100%;
+      img.desk {
+        display: none;
+      }
+      img.mob {
+        display: block;
+      }
+    }
+  }
+
+  &__slide-desc {
+    position: absolute;
+    @extend %text-h3;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    background-color: #fff;
+    &--top {
+      top: 2.8125rem;
+      right: 7.5rem;
+      @media (max-width: 992px) {
+        right: 39px;
+      }
+      @media (max-width: 767px) {
+        top: 96px;
+        right: 14px;
+      }
+    }
+    &--bottom {
+      bottom: 2.8125rem;
+      left: 8.625rem;
+      @media (max-width: 992px) {
+        left: 80px;
+      }
+      @media (max-width: 767px) {
+        bottom: 89px;
+        left: 15px;
+      }
+    }
+  }
+
+  &__arrows {
+    @extend %arrows;
+    position: absolute;
+    bottom: 3rem;
+    z-index: 10;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    @extend %arrow;
+    &--prev {
+      @extend %arrow-left;
+    }
+  }
+
+  &__br {
+    &--hide-mob {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+%text-h1 {
+  font: 500 4.5rem/4.125rem Euclid, sans-serif;
+  color: #000;
+  @media (max-width: 768px) {
+    font-size: 48px;
+    line-height: 44px;
+  }
+}
+
+%text-h2 {
+  font: 500 2rem/2.53125rem Euclid, sans-serif;
+  color: #000;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 30.43px;
+  }
+}
+
+%text-h3 {
+  font: 500 1.5rem/1.9rem Euclid, sans-serif;
+  color: #000;
+}
+
+%text-body {
+  font: 500 1.125rem/1.4375rem Euclid, sans-serif;
+  color: #000;
+}
+
+%text-caption {
+  font: 500 0.875rem/1.1125rem Euclid, sans-serif;
+  color: #000;
+}
+
+%btn {
+  text-align: center;
+  @extend %text-body;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+%logo {
+  @extend %flex-row;
+  align-items: center;
+  cursor: pointer;
+  img {
+    display: block;
+    margin-right: 1rem;
+  }
+  span {
+    @extend %text-h2;
+  }
+}
+
+%arrows {
+  padding: 8px 0;
+  @extend %flex-row;
+  align-items: center;
+  background: #fff;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+%arrow {
+  background: url("../img/arrow.svg") 50% 50% no-repeat;
+  background-size: 10px;
+  padding: 8px 14px 8px 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  &.slick-disabled {
+    opacity: .2;
+  }
+}
+
+%arrow-left {
+  @extend %arrow;
+  transform: rotate(180deg);
+  border-left: 1px solid #F5F5F5;
+}
+

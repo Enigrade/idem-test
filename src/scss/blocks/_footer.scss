@@ -1,0 +1,74 @@
+.footer {
+  background: #F5F5F5;
+
+  &__main {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 24px;
+    @extend %flex-row;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
+  }
+
+  &__logo {
+    @extend %logo;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__btn {
+    @extend %text-h2;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__socs {
+    @extend %flex-row;
+    &-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      cursor: pointer;
+      &--fb {
+        background-image: url("../img/fb.svg");
+        margin-right: 8px;
+      }
+      &--vk {
+        background-image: url("../img/vk.svg");
+      }
+    }
+  }
+
+  &__info {
+    @extend %flex-row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__copy {
+    @extend %text-caption;
+    width: 50%;
+    @media (max-width: 767px) {
+      order: 1;
+    }
+  }
+
+  &__policy {
+    @extend %text-caption;
+    @media (max-width: 767px) {
+      order: 0;
+      margin-bottom: 24px;
+    }
+  }
+}

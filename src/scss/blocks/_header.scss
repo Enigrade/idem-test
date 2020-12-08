@@ -1,0 +1,50 @@
+.header {
+  &__wrap {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @extend %flex-row;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 992px) {
+      padding-bottom: 32px;
+      padding-top: 35px;
+    }
+
+    @media (max-width: 767px) {
+      padding-top: 27px;
+      padding-bottom: 36px;
+    }
+  }
+
+  &__logo {
+    @extend %logo;
+  }
+
+  &__contacts {
+    @extend %flex-row;
+    align-items: center;
+  }
+
+  &__phone {
+    @extend %text-body;
+    margin-right: 2rem;
+    @media (max-width: 767px) {
+      font-size: 0;
+      color: transparent;
+      width: 16px;
+      height: 24px;
+      background: url("../img/phone.svg") 50% 50% no-repeat;
+      background-size: contain;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    @extend %btn;
+    background-color: #FFDF31;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+}
